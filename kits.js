@@ -1,4 +1,5 @@
 let kits = {};
+// 封装一个固定格式的时间
 kits.formateDate = function () {
     let date = new Date();
     let y = date.getFullYear();
@@ -30,7 +31,8 @@ kits.primaryKey = function(){
 
 
 // 新增一个获取本地数据的方法
-kits.getLocalArr = function(key){
+
+kits.getLocalArr = function(){
     let jsonStr = localStorage.getItem(key);
     let arr;
     if(jsonStr === null){
