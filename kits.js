@@ -27,4 +27,16 @@ kits.primaryKey = function(){
     let r = kits.ranDomInt(100000,999999);
     // 把得到的两个结果拼接起来
     return now + '' + r;
+
+
+// 新增一个获取本地数据的方法
+kits.getLocalArr = function(key){
+    let jsonStr = localStorage.getItem(key);
+    let arr;
+    if(jsonStr === null){
+        arr = [];
+    }else{
+        arr = JSON.parse(jsonStr);
+    }
+    return arr;
 }
